@@ -1,5 +1,5 @@
 import cv2 # Importing opencv
-import numpy as np
+import numpy as np # Importing numpy
 
 # Images path
 img_input_path = "Image/image_input_small.png" # Image input Path
@@ -23,14 +23,14 @@ cv2.waitKey(0)
 """
 
 # Define the grid size (e.g., 4 columns x 3 rows)
-grid_cols = 25  # Number of columns
-grid_rows = 6  # Number of rows
+grid_cols = 50  # Number of columns
+grid_rows = 30  # Number of rows
 
 # Get image dimensions from rows(height) and columns(width)
 img_height, img_width = img_input_gray.shape[:2] #e.g 119 (rows) and 64(columns)
 
-canvas_width = img_width * grid_cols  # e.g 64 * 25 = 1600
-canvas_height = img_height * grid_rows  # e.g 119 * 6 = 714
+canvas_width = img_width * grid_cols  # e.g 32 * 40 = 1280
+canvas_height = img_height * grid_rows  # e.g 32 * 30 = 960
 canvas = np.zeros((canvas_height, canvas_width), dtype=np.uint8) # e.g the image dimension will be 714x1600 
 
 # Tile the image into the grid
@@ -48,3 +48,4 @@ for row in range(grid_rows):
 # Display
 cv2.imshow("Tiled Image Grid", canvas)
 cv2.waitKey(0)
+cv2.imwrite("matrix_intermedium.png", canvas)
