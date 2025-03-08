@@ -3,8 +3,8 @@ import numpy as np # Importing numpy
 import time
 
 # Images path
-img_input_path = "Image/image_input_small.png" # Image input Path
-img_output_path = "Image/pinguim.png" # Image output Path
+img_input_path = "Image/image_input.png" # Image input Path
+img_output_path = "Image/image_output.png" # Image output Path
 
 # Load Images
 img_input = cv2.imread(img_input_path)
